@@ -611,3 +611,246 @@ footer p:last-child {
   outline: 3px solid #82837c;
   outline-offset: 4px;
 }
+
+/* Why BotPocket page */
+
+nav a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.page-hero {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 110px 0 40px;
+}
+
+.page-hero h1 {
+  max-width: 900px;
+}
+
+.page-hero .hero-copy {
+  max-width: 680px;
+}
+
+.principle {
+  display: grid;
+  width: min(1180px, calc(100% - 48px));
+  grid-template-columns: minmax(0, 1fr);
+  gap: 44px;
+  margin: 0 auto;
+  padding: 120px 0 0;
+  scroll-margin-top: 60px;
+}
+
+.principle-text {
+  display: grid;
+  max-width: 780px;
+  gap: 4px;
+}
+
+.principle h2 {
+  margin: 14px 0 18px;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1.06;
+}
+
+.principle-text p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+
+.principle-text strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.diagram {
+  margin: 0;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.diagram-scroll {
+  overflow-x: auto;
+}
+
+.diagram svg {
+  display: block;
+  width: 100%;
+  min-width: 640px;
+  height: auto;
+}
+
+.diagram figcaption {
+  max-width: 760px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.diagram text {
+  fill: currentColor;
+  font-family: inherit;
+  text-anchor: middle;
+}
+
+.d-lane {
+  fill: var(--muted) !important;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-anchor: start !important;
+  text-transform: uppercase;
+}
+
+.d-label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.d-sub,
+.d-edge,
+.d-node {
+  font-size: 12.5px;
+}
+
+.d-sub {
+  fill: var(--muted) !important;
+}
+
+.d-edge {
+  font-weight: 500;
+}
+
+.d-node {
+  font-weight: 500;
+}
+
+.diagram .d-left,
+.diagram .d-note {
+  text-anchor: start;
+}
+
+.d-note {
+  font-size: 13.5px;
+}
+
+.d-bad {
+  fill: var(--muted) !important;
+}
+
+.d-on-strong {
+  fill: var(--surface) !important;
+}
+
+.d-box {
+  fill: var(--canvas);
+  stroke: var(--line-dark);
+  stroke-width: 1.2;
+}
+
+.d-strong {
+  fill: var(--button);
+}
+
+.d-line {
+  stroke: currentColor;
+  stroke-width: 1.4;
+}
+
+.d-divider {
+  stroke: var(--line);
+  stroke-dasharray: 4 6;
+}
+
+.d-mini-graph line {
+  stroke: var(--faint);
+  stroke-width: 1.4;
+}
+
+.d-mini-graph circle {
+  fill: var(--surface);
+}
+
+.d-doc-lines line {
+  stroke: var(--line-dark);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.d-graph line {
+  stroke: var(--line-dark);
+  stroke-width: 1.5;
+}
+
+.d-graph circle {
+  fill: var(--surface);
+  stroke: var(--faint);
+  stroke-width: 1.5;
+}
+
+.d-path {
+  stroke: var(--ink);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.d-hit {
+  fill: var(--ink);
+}
+
+.d-new line,
+.d-new-line {
+  stroke: var(--muted);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 5;
+}
+
+.d-new circle {
+  fill: var(--surface);
+  stroke: var(--muted);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 3;
+}
+
+.d-bar-track {
+  fill: var(--surface-strong);
+}
+
+.d-bar-fill {
+  fill: var(--button);
+}
+
+.closing {
+  padding-bottom: 100px;
+}
+
+@media (max-width: 850px) {
+    .principle {
+    padding-top: 96px;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-hero,
+  .principle {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .page-hero {
+    padding-top: 72px;
+  }
+
+  .diagram {
+    padding: 18px;
+  }
+}
