@@ -854,3 +854,125 @@ nav a[aria-current="page"] {
     padding: 18px;
   }
 }
+
+/* Waitlist and contact */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.waitlist-grid {
+  display: grid;
+  align-items: start;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 48px;
+}
+
+.waitlist-grid .section-heading p:last-child {
+  margin: 0;
+  color: var(--muted);
+}
+
+.waitlist-form {
+  display: grid;
+  gap: 8px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--surface);
+}
+
+.waitlist-form label {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.waitlist-form label span {
+  color: var(--faint);
+  font-weight: 400;
+}
+
+.waitlist-form input,
+.waitlist-form textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid var(--line-dark);
+  border-radius: 14px;
+  background: var(--canvas);
+  color: var(--ink);
+  font: inherit;
+  resize: vertical;
+}
+
+.waitlist-form input:focus,
+.waitlist-form textarea:focus {
+  border-color: #81827b;
+  outline: none;
+}
+
+.waitlist-form button {
+  margin-top: 16px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.form-status {
+  min-height: 1.5em;
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.contact-section {
+  padding-top: 110px;
+  padding-bottom: 60px;
+}
+
+.founders {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.founder-card {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--surface);
+}
+
+.founder-card h3 {
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.founder-card p {
+  margin: 0 0 22px;
+  color: var(--muted);
+}
+
+.founder-card a {
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--line-dark);
+  transition: border-color 160ms ease;
+}
+
+.founder-card a:hover {
+  border-color: var(--ink);
+}
+
+@media (max-width: 850px) {
+  .waitlist-grid,
+  .founders {
+    grid-template-columns: 1fr;
+  }
+}

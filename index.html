@@ -28,7 +28,8 @@
         <a href="./why.html">Why BotPocket</a>
         <a href="#how-it-works">How to use</a>
         <a href="#pricing">Pricing</a>
-        <a class="nav-cta" href="#pricing">Try it for free</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="#waitlist">Join waitlist</a>
       </nav>
     </header>
 
@@ -176,6 +177,61 @@
         </div>
       </section>
 
+      <section class="section waitlist-section" id="waitlist" aria-labelledby="waitlist-title">
+        <div class="waitlist-grid">
+          <div class="section-heading">
+            <p class="section-kicker">Waitlist</p>
+            <h2 id="waitlist-title">Be first to get a pocket.</h2>
+            <p>Leave your email and we’ll let you know when BotPocket opens up.</p>
+          </div>
+
+          <form
+            class="waitlist-form"
+            action="https://formsubmit.co/rsongnov@gmail.com"
+            method="POST"
+          >
+            <label for="wl-name">Name <span>(optional)</span></label>
+            <input id="wl-name" name="name" type="text" autocomplete="name" />
+
+            <label for="wl-email">Email</label>
+            <input id="wl-email" name="email" type="email" autocomplete="email" required />
+
+            <label for="wl-use">What would you use it for? <span>(optional)</span></label>
+            <textarea id="wl-use" name="message" rows="3"></textarea>
+
+            <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <input type="hidden" name="_subject" value="New BotPocket waitlist signup" />
+            <input type="hidden" name="_template" value="table" />
+
+            <button class="primary-button" type="submit">
+              Join the waitlist
+              <span aria-hidden="true">↗</span>
+            </button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="section-heading">
+          <p class="section-kicker">Contact</p>
+          <h2 id="contact-title">Questions? Email the founders.</h2>
+        </div>
+
+        <div class="founders">
+          <article class="founder-card">
+            <h3>Dr Rongrong Song</h3>
+            <p>Founder · PhD, Monash University</p>
+            <a href="mailto:rsongnov@gmail.com">rsongnov@gmail.com</a>
+          </article>
+          <article class="founder-card">
+            <h3>Yiwen Chen</h3>
+            <p>Founder</p>
+            <a href="mailto:106156996@student.swin.edu.au">106156996@student.swin.edu.au</a>
+          </article>
+        </div>
+      </section>
+
     </main>
 
     <footer>
@@ -185,5 +241,26 @@
       <p>Grounded answers, from the files you trust.</p>
       <p>© 2026 BotPocket</p>
     </footer>
+    <script>
+      const form = document.querySelector(".waitlist-form");
+      const status = form.querySelector(".form-status");
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        status.textContent = "Sending…";
+        try {
+          const response = await fetch(form.action.replace("formsubmit.co/", "formsubmit.co/ajax/"), {
+            method: "POST",
+            body: new FormData(form),
+            headers: { Accept: "application/json" },
+          });
+          const result = await response.json();
+          if (!response.ok || String(result.success) !== "true") throw new Error();
+          form.reset();
+          status.textContent = "You’re on the list. We’ll be in touch.";
+        } catch {
+          status.textContent = "Something went wrong. Please email rsongnov@gmail.com instead.";
+        }
+      });
+    </script>
   </body>
 </html>
