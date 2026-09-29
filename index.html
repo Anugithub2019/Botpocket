@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="BotPocket grounds your AI bots in your own files with a modern GraphRAG stack."
+    />
+    <meta name="theme-color" content="#f5f5f2" />
+    <title>BotPocket — Ground your AI in your files</title>
+    <link rel="icon" type="image/png" href="./botpocket-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="BotPocket home">
+        <span>BotPocket</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#how-it-works">How to use</a>
+        <a href="#pricing">Pricing</a>
+        <a class="nav-cta" href="#pricing">Try it for free</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <div class="eyebrow">
+            <span class="eyebrow-icon" aria-hidden="true">✦</span>
+            Cloud knowledge database for your AI agents
+          </div>
+          <h1 id="hero-title">
+            Drop your files into the bot pocket
+            <span class="hero-title-line">Let your AI bots ground their answers</span>
+          </h1>
+          <p class="hero-copy">
+            BotPocket connects your files to your AI assistants with the GraphRAG database
+          </p>
+          <a class="primary-button" href="#pricing">
+            Try it for free
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <figure class="hero-visual">
+          <img
+            src="./botpocket-logo.png"
+            alt="BotPocket robot turning files into connected knowledge"
+          />
+        </figure>
+      </section>
+
+      <section class="video-section" aria-label="BotPocket product video">
+        <div class="video-shell">
+          <div class="video-toolbar" aria-hidden="true">
+            <div class="video-dots"><span></span><span></span><span></span></div>
+            <span>BotPocket demo</span>
+            <span class="video-time">00:06</span>
+          </div>
+          <video class="product-video" controls loop playsinline preload="metadata">
+            <source src="./botpocket-demo.mp4" type="video/mp4" />
+            Your browser does not support embedded video.
+          </video>
+        </div>
+      </section>
+
+      <section class="section" id="how-it-works" aria-labelledby="how-title">
+        <div class="section-heading">
+          <p class="section-kicker">How to use</p>
+          <h2 id="how-title">From file to grounded answer in three steps.</h2>
+        </div>
+
+        <div class="steps">
+          <article class="step-card">
+            <span class="step-number">01</span>
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" role="img">
+                <path d="M14 5h14l8 8v30H14z" />
+                <path d="M28 5v9h8M20 25h10M20 32h10" />
+              </svg>
+            </div>
+            <h3>Drop in your files</h3>
+            <p>Add the documents that contain the knowledge your AI needs.</p>
+          </article>
+
+          <article class="step-card">
+            <span class="step-number">02</span>
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" role="img">
+                <circle cx="13" cy="24" r="6" />
+                <circle cx="35" cy="13" r="6" />
+                <circle cx="35" cy="35" r="6" />
+                <path d="m18 21 11-5M18 27l11 5" />
+              </svg>
+            </div>
+            <h3>Connect through MCP</h3>
+            <p>Link BotPocket to your AI bot with the open Model Context Protocol.</p>
+          </article>
+
+          <article class="step-card">
+            <span class="step-number">03</span>
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" role="img">
+                <path d="M9 10h30v23H22l-9 7v-7H9z" />
+                <path d="M16 18h16M16 25h11" />
+              </svg>
+            </div>
+            <h3>Ask with confidence</h3>
+            <p>Your bot finds relevant context and answers from your source material.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section pricing-section" id="pricing" aria-labelledby="pricing-title">
+        <div class="section-heading pricing-heading">
+          <div>
+            <p class="section-kicker">Pricing</p>
+            <h2 id="pricing-title">Start small. Bring every bot when you’re ready.</h2>
+          </div>
+          <p>No credit card required for the free plan.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <div>
+              <p class="plan-name">Pocket</p>
+              <p class="price"><span>$</span>0 <small>/ month</small></p>
+              <p class="plan-description">For trying BotPocket with your first AI bot.</p>
+            </div>
+            <ul>
+              <li>1 AI bot connection</li>
+              <li>250 MB of files</li>
+              <li>Core GraphRAG search</li>
+            </ul>
+            <a class="secondary-button" href="mailto:hello@botpocket.ai?subject=Start%20with%20BotPocket">Start free</a>
+          </article>
+
+          <article class="price-card featured">
+            <div class="popular-label">Most popular</div>
+            <div>
+              <p class="plan-name">Pro</p>
+              <p class="price"><span>$</span>19 <small>/ month</small></p>
+              <p class="plan-description">For builders grounding several bots in shared knowledge.</p>
+            </div>
+            <ul>
+              <li>10 AI bot connections</li>
+              <li>10 GB of files</li>
+              <li>Priority indexing</li>
+            </ul>
+            <a class="secondary-button dark" href="mailto:hello@botpocket.ai?subject=BotPocket%20Pro">Choose Pro</a>
+          </article>
+
+          <article class="price-card">
+            <div>
+              <p class="plan-name">Team</p>
+              <p class="price"><span>$</span>49 <small>/ month</small></p>
+              <p class="plan-description">For teams building AI around a larger knowledge base.</p>
+            </div>
+            <ul>
+              <li>Unlimited bot connections</li>
+              <li>50 GB of files</li>
+              <li>Shared team workspace</li>
+            </ul>
+            <a class="secondary-button" href="mailto:hello@botpocket.ai?subject=BotPocket%20Team">Choose Team</a>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <a class="brand footer-brand" href="#top">
+        <span>BotPocket</span>
+      </a>
+      <p>Grounded answers, from the files you trust.</p>
+      <p>© 2026 BotPocket</p>
+    </footer>
+  </body>
+</html>
