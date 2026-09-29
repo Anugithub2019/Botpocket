@@ -976,3 +976,16 @@ nav a[aria-current="page"] {
     grid-template-columns: 1fr;
   }
 }
+
+.enterprise-note {
+  margin: 28px 0 0;
+  color: var(--muted);
+  text-align: center;
+}
+
+.enterprise-note a {
+  margin-left: 6px;
+  color: var(--ink);
+  font-weight: 600;
+  border-bottom: 1px solid var(--line-dark);
+}
